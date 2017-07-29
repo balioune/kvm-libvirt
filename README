@@ -1,0 +1,24 @@
+## In this lab, we will implement an hybrid station composed by KVM and docker instances
+
+## Architecture of a Base Band station
+
+             
+
+                                 
+       -------------------------------------- management network -----------------------------------              
+          |                            |                            |                            |
+          |                            |                            |                            |
+          |                            |                            |                            |
+       --------                     --------                     --------                       --------
+       | VNF1 |-------- net1 -------| VNF2 | ------- net2 -------| VNF3 |-------- net3 -------- | VNF4 |
+       --------                     --------                     --------                       --------
+
+
+VNF1 and VNF4 are KVM instances
+
+VNF2 and VNF3 are docker containers
+
+mgnt-network: 192.168.122.0/24
+net1: 192.168.1.0/24
+net2: 192.168.2.0/24
+net3: 192.168.3.0/24
