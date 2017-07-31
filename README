@@ -14,9 +14,9 @@
        --------                     --------                     --------                       --------
 
 
-VNF1 and VNF4 are KVM instances
+VNF1 and VNF3 are KVM instances
 
-VNF2 and VNF3 are docker containers
+VNF2 and VNF4 are docker containers
 
 mgnt-network: 192.168.122.0/24
 net1: 192.168.1.0/24
