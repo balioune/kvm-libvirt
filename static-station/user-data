@@ -1,0 +1,7 @@
+#cloud-config
+
+password: password
+chpasswd: { expire: False }
+ssh_pwauth: True
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwnRe5EKCaecMsbHajWYcPpw/GaBQVEWdc7W/xzKq28MFoYDqFfLsZK0OS+fI3rWsYe91ewOcEe8LBzFkwsfyXpgJwhwVGshUl6b2OW97XrXXBWE52hJ20MJzCe7VgLLQBLdFQfumzMwcn71MYiJ1B5tsGJ2JBhd0bh3k6m6JiLpoHrTKI1yXGtwk+wIJyWTxGOMP0eQesf38YWGUvrfsEoa2US1pvjrHJEALWf8Svp6RryMA2mbyx9NoMqV883JN3TJuvDGOqnn3kodli6Ebah8vcqB/cw6v2gE8ZxQbOUsuykhqoHYoZ1OJ9SRdyG66778dCLxpauiUHAUAk0kjj alioune@foutatoro

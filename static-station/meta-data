@@ -1,0 +1,7 @@
+instance-id: iid-vnf3;
+network-interfaces: |
+  auto eth0
+  iface eth0 inet dhcp
+
+hostname: vnf3
+local-hostname: vnf3
