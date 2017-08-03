@@ -73,6 +73,10 @@ EOF
   sudo ovs-vsctl add-port br-$1 dhcp-$1
 }
 
+## Public network rules
+#sudo iptables -A FORWARD --dst 192.168.1.0/24 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+#sudo iptables -A FORWARD --src 192.168.1.0/24 -j ACCEPT
+#sudo iptables -t nat  -A POSTROUTING --src 192.168.1.0/24 -o eth0 -j SNAT --to 10.0.2.15
 
 create_dhcp_server $NETNAME $IPRANGE $IPMASK
 
