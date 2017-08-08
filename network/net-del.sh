@@ -12,6 +12,7 @@ NETNAME=$1
 function delete_dhcp_server()
 {
   sudo ip netns del dhcp-server-$1
+  sudo rm /var/lib/misc/dnsmasq.leases.$1
   ##delete dns server
   echo $DHCPPROC
   sudo kill -9 $DHCPPROC

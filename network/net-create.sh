@@ -48,7 +48,9 @@ function create_dhcp_server()
   sudo ip netns exec dhcp-server-$1 ifconfig eth0-$1 $DHCPIP netmask $3
   
   #sudo ip netns exec dhcp-server-$1 dnsmasq --interface=eth0-$1 --dhcp-range=$DHRANGE1,$DHRANGE2,$3
-  sudo ip netns exec dhcp-server-$1 dnsmasq --interface=eth0-$1 --dhcp-range=$DHRANGE1,$DHRANGE2,$3 --dhcp-option=3 --dhcp-option=6
+  #sudo ip netns exec dhcp-server-$1 dnsmasq --interface=eth0-$1 --dhcp-range=$DHRANGE1,$DHRANGE2,$3 --dhcp-option=3 --dhcp-option=6
+  sudo touch /var/lib/misc/dnsmasq.leases.$1
+  sudo ip netns exec dhcp-server-$1 dnsmasq --interface=eth0-$1 --dhcp-leasefile=/var/lib/misc/dnsmasq.leases.$1 --dhcp-range=$DHRANGE1,$DHRANGE2,$3 --dhcp-option=3 --dhcp-option=6
 }
 
 function create_kvm_ovs_net()
