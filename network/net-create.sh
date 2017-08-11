@@ -73,6 +73,8 @@ EOF
   sudo virsh net-start $1
   ##Add DHCP port to the OVS bridge
   sudo ovs-vsctl add-port br-$1 dhcp-$1
+
+  sudo rm network.xml 
 }
 
 ## Public network rules
